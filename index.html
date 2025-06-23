@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sricharan G | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="light-mode">
+  <div class="glass-container">
+    <button class="toggle-btn" onclick="toggleMode()">🌙</button>
+    <section class="hero glass-card" data-aos="zoom-in">
+      <img src="profile.jpg" alt="Sricharan G" class="profile-img">
+      <h1>Hi, I'm <span class="highlight">Sricharan G</span></h1>
+      <p class="typewriter"></p>
+      <div class="btn-group">
+        <button onclick="showSlide(0)">About</button>
+        <button onclick="showSlide(1)">Contact</button>
+        <button onclick="showSlide(2)">Examples</button>
+      </div>
+    </section>
+    <section class="slider">
+      <div class="slide glass-card" id="about" data-aos="fade-right">
+        <h2>About Me</h2>
+        <p>I’m a tech enthusiast who enjoys crafting creative and functional digital experiences. I believe in building with purpose and learning endlessly.</p>
+      </div>
+      <div class="slide glass-card" id="contact" data-aos="fade-left">
+        <h2>Contact</h2>
+        <p>📞 +91 8754073061</p>
+        <p>📧 gsricharan2006@gmail.com</p>
+      </div>
+      <div class="slide glass-card" id="examples" data-aos="zoom-in-up">
+        <h2>My Work</h2>
+        <div class="carousel">
+          <button class="carousel-btn left" onclick="prevProject()">‹</button>
+          <div class="carousel-track" id="carouselTrack">
+            <div class="project-card">
+              <h3>Portfolio Website</h3>
+              <p>Responsive personal website showcasing skills and projects.</p>
+            </div>
+            <div class="project-card">
+              <h3>Weather App</h3>
+              <p>Live weather app using OpenWeatherMap API and JavaScript.</p>
+            </div>
+            <div class="project-card">
+              <h3>Login Page UI</h3>
+              <p>Glass-themed login form with smooth UI and animations.</p>
+            </div>
+          </div>
+          <button class="carousel-btn right" onclick="nextProject()">›</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">© 2025 Sricharan G</footer>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+  <script src="script.js"></script>
+</body>
+</html>
